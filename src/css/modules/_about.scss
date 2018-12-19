@@ -1,0 +1,68 @@
+// .about {
+//   padding-top: 100px;
+//   display: grid;
+//   grid-template-columns: 500px 500px;
+//   grid-template-rows: auto;
+//   justify-content: center;
+//   grid-gap: 10px;
+//   font-family: $roboto;
+//   font-weight: 400;
+//   font-size: 1.4rem;
+//   line-height: 2rem; // margin: auto;
+//   // font-family: "Montserrat", sans-serif;
+//   // font-size: 1.2rem;
+//   // letter-spacing: 2px;
+// }
+.about {
+	
+	margin: auto;
+	font-family: $roboto;
+	font-weight: 400;
+	font-size: 1.4rem;
+	line-height: 2rem; // margin: auto;
+	@include atSmall {
+    padding: 10px 30px 0px 30px;
+		min-width: 100px;
+	}
+	@include atMedium {
+		padding: 40px 30px 0px 30px;
+		width: 700px;
+	}
+	@include atXMedium {
+		width: 800px;
+	}
+	@include atLarge {
+    padding: 100px 30px 0px 30px;
+		width: 1500px;
+	}
+	@include atXLarge {
+		width: 1800px;
+	}
+}
+
+.about-image {
+	@include atSmall {
+		width: 100%;
+		max-width: 470px;
+		float: none;
+		padding: 0px 0px 0px 0px;
+	}
+	@include atMedium {
+		float: left;
+		padding: 0px 20px 5px 0px;
+	}
+}
+
+.about-second-paragraph {
+}
+
+.about-dropcap {
+	color: $red;
+	float: left;
+	font-family: Georgia; // font-family: Gruppo;
+	font-size: 6rem;
+	line-height: 2.2rem;
+	padding-top: 4px;
+	padding-right: 8px;
+	padding-left: 3px;
+}

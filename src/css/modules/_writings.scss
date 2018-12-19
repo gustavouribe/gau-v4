@@ -1,0 +1,65 @@
+.img-writing {
+  width: 100%;
+  max-width: 700px;
+}
+
+.writings {
+  display: grid;
+  grid-template-columns: 700px 700px;
+  grid-template-rows: auto;
+  justify-content: center;
+  grid-gap: 10px;
+  font-family: $roboto;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2rem; // margin: auto;
+  // font-family: "Montserrat", sans-serif;
+  // font-size: 1.2rem;
+  // letter-spacing: 2px;
+  @include atSmall {
+    padding: 5px 30px 0px 30px;
+    grid-template-columns: minmax(100px, 800px);
+    grid-template-areas: "a" "b";
+  }
+  @include atXMedium {
+    padding: 30px 30px 0px 30px;
+    grid-template-columns: minmax(100px, 700px) minmax(100px, 700px);
+    grid-template-areas: "a b";
+  }
+  @include atLarge {
+    padding: 100px 30px 0px 30px;
+  }
+}
+
+.writings a:link,
+a:visited,
+a:active {
+  color: black;
+  font-size: 1.4rem;
+  text-transform: none;
+  padding: 0px;
+}
+
+.writings a:hover {
+  color: $red;
+  transition: 0.3s;
+}
+
+.composition-grid a:hover {
+  color: $red;
+  transition: 0.3s;
+}
+
+.writing-a {
+  grid-area: a;
+}
+
+.writing-b {
+  grid-area: b;
+}
+
+.writing-dropcap {
+  font-size: 3rem;
+  color: $red;
+  font-family: $oswald;
+}

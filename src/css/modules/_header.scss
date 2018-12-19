@@ -1,0 +1,84 @@
+.header {
+  @include atSmall {
+    display: none;
+  }
+  @include atXMedium {
+    display: initial;
+  }
+}
+
+.main-title {
+  font-size: 6rem;
+  text-align: center;
+  margin: auto;
+}
+
+.nav-bar {
+  font-family: $roboto;
+  letter-spacing: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 20px;
+  z-index: 100;
+}
+
+.nav-bar a:link,
+a:visited,
+a:active {
+  color: black;
+  text-decoration: none;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding: 10px 0px;
+}
+
+.nav-bar a:hover {
+  color: rgba(0, 0, 0, 0.747);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.border {
+  position: relative;
+}
+
+.border:before {
+  content: "";
+  position: absolute;
+  width: 105%;
+  height: 0;
+  left: -10px;
+  bottom: -2px;
+  /*Change this to increase/decrease distance*/
+  border-bottom: 3px solid $red; // visibility: hidden;
+  // -webkit-transform: scaleX(0);
+  // transform: scaleX(0);
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.border:hover:before {
+  // visibility: visible;
+  // -webkit-transform: scaleX(1);
+  // transform: scaleX(1);
+  opacity: 1;
+}
+
+.toggle-btn {
+  cursor: pointer;
+  padding: 20px;
+  @include atSmall {
+    font-size: 2rem;
+  }
+  @include atXSmall {
+    font-size: 3rem;
+  }
+  @include atMedium {
+    font-size: 4rem;
+  }
+  @include atXMedium {
+    display: none;
+  }
+}

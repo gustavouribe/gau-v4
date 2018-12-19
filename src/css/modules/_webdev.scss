@@ -1,0 +1,126 @@
+.webdev {
+  display: grid;
+  grid-template-columns: 600px 600px;
+  grid-template-rows: auto;
+  justify-content: center;
+  grid-gap: 10px;
+  font-family: $roboto;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  @include atSmall {
+    padding: 5px 30px 0px 30px;
+    grid-template-columns: minmax(100px, 800px);
+    grid-template-areas: "a" "b" "c";
+  }
+  @include atMedium {
+    padding: 40px 30px 0px 30px;
+    grid-template-columns: minmax(100px, 600px) minmax( 100px, 600px);
+    grid-template-areas: "a b" "c c";
+  }
+  @include atXMedium {
+    grid-template-columns: minmax(100px, 600px) minmax( 100px, 600px);
+    grid-template-areas: "a b" "a c";
+  }
+  @include atLarge {
+    padding: 100px 30px 0px 30px;
+  }
+}
+
+.webdev a:link,
+a:visited,
+a:active {
+  color: black;
+  font-size: 1.4rem;
+  text-transform: none;
+  padding: 0px;
+}
+
+.webdev a:hover {
+  color: $red;
+  transition: 0.3s;
+}
+
+.webdev-a {
+  grid-area: a;
+}
+
+.webdev-b {
+  grid-area: b;
+}
+
+.webdev-c {
+  grid-area: c;
+}
+
+.img-webdev {
+  width: 100%;
+  max-width: 475px;
+}
+
+.webdev-pullquote {
+  font-family: $oswald;
+  color: black;
+  position: relative;
+  @include atSmall {
+    left: 0px;
+    font-size: 2rem;
+  }
+  @include atXSmall {
+    left: 0px;
+    font-size: 2.8rem;
+  }
+  @include atMedium {
+    top: 20px;
+    left: 20px;
+    font-size: 3rem;
+  }
+  @include atXMedium {
+    left: 0px;
+    font-size: 3rem;
+  }
+  @include atLarge {
+    left: -80px;
+    font-size: 3rem;
+  }
+}
+
+.webdev-pullquote:after {
+  content: ' cholo 3000"';
+  font-family: $oswald;
+  color: $red;
+  text-transform: uppercase;
+  z-index: -1;
+  position: absolute;
+  width: 500%;
+  @include atSmall {
+    height: 0;
+    left: 20px;
+    bottom: -2px;
+    font-size: 3rem;
+  }
+  @include atXSmall {
+    height: 0;
+    left: 40px;
+    bottom: -2px;
+    font-size: 3.8rem;
+  }
+  @include atMedium {
+    height: 0;
+    left: 170px;
+    bottom: -2px;
+    font-size: 6rem;
+  }
+  @include atXMedium {
+    height: 0;
+    left: 90px;
+    bottom: -2px;
+    font-size: 5rem;
+  }
+  @include atLarge {
+    height: 0;
+    left: 170px;
+    bottom: -2px;
+    font-size: 8rem;
+  }
+}

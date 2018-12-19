@@ -1,0 +1,78 @@
+.sidebar {
+  color: black;
+  font-family: $roboto;
+  letter-spacing: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 20px;
+  transition: 0.5s;
+  margin-top: 0px;
+  transition: transform 0.3s; // transform: translate3d(50vw, 0, 0);
+  &--hide {
+    height: 0px;
+    transform: translateY(-500px);
+    z-index: -1;
+    color: white; // visibility: hidden;
+    transition: transform 0.9s ease;
+    background: white;
+  }
+  &--show {
+    height: 100%;
+    transition: transform 0.5s ease;
+    transform: translateY(0px);
+    opacity: 100;
+    z-index: 100;
+  }
+}
+
+// {this.state.isToggleOn && (	)}
+.sidebar a:link,
+a:visited,
+a:active {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 0px;
+  @include atSmall {
+    font-size: 1.8rem;
+  }
+  @include atLarge {
+    font-size: 2.5rem;
+  }
+}
+
+.nav-bar a:hover {
+  color: rgba(0, 0, 0, 0.747);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.border {
+  position: relative;
+}
+
+.border:before {
+  content: "";
+  position: absolute;
+  width: 105%;
+  height: 0;
+  left: -10px;
+  bottom: -2px;
+  /*Change this to increase/decrease distance*/
+  border-bottom: 3px solid $red; // visibility: hidden;
+  // -webkit-transform: scaleX(0);
+  // transform: scaleX(0);
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.border:hover:before {
+  // visibility: visible;
+  // -webkit-transform: scaleX(1);
+  // transform: scaleX(1);
+  opacity: 1;
+}

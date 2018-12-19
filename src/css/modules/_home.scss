@@ -1,0 +1,167 @@
+.home-demo {
+	@include atSmall {
+		background-color: black;
+		font-size: 1.25rem;
+		color: rgb(208, 255, 0);
+	}
+	@include atMedium {
+		background-color: rgb(68, 68, 68);
+		font-size: 1.75rem;
+		color: rgb(255, 187, 0);
+	}
+	@include atLarge {
+		background-color: grey;
+		font-size: 2rem;
+		color: rgb(128, 41, 0);
+	}
+	@include atXLarge {
+		background-color: rgb(212, 212, 212);
+		font-size: 2.5rem;
+		color: rgb(128, 0, 0);
+	}
+}
+
+.home {
+	position: relative;
+}
+
+.video {
+	// position: relative;
+	z-index: -1; // visibility: hidden;
+	width: 100%;
+	video {
+		min-width: 100%;
+		min-height: 100%;
+	}
+}
+
+// .video {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100vh;
+//   overflow: hidden;
+//   z-index: -99;
+// }
+// .video video {
+//   min-width: 100%;
+//   min-height: 100%;
+// }
+.hero {
+	position: absolute; // display: none;
+	text-align: center;
+	color: white;
+	background: rgba(0, 0, 0, 0.1);
+	width: 100%;
+	@include atSmall {
+		top: 5vh;
+		height: 100px;
+	}
+	@include atMedium {
+		top: 10vh;
+		height: 160px;
+	}
+	@include atXMedium {
+		top: 10vh;
+		height: 220px;
+	}
+	@include atLarge {
+		top: 30vh;
+		height: 300px;
+	}
+	@include atXLarge {
+		top: 30vh;
+		height: 350px;
+	}
+}
+
+.hero__header {
+	margin: 0;
+	font-family: $gruppo;
+	text-shadow: 0px 2px #00000069;
+	@include atSmall {
+		padding-top: 20px;
+		font-size: 1.2rem;
+		letter-spacing: 5px;
+	}
+	@include atMedium {
+		padding-top: 30px;
+		font-size: 2.5rem;
+		letter-spacing: 7px;
+	}
+	@include atXMedium {
+		font-size: 4rem;
+		letter-spacing: 5px;
+	}
+	@include atLarge {
+		font-size: 6rem;
+		letter-spacing: 10px;
+	}
+	@include atXLarge {
+		font-size: 8rem;
+		letter-spacing: 15px;
+	}
+}
+
+.hero__sub-header {
+	margin-top: 5;
+	font-family: $gruppo;
+	text-shadow: 0px 2px #00000069;
+	@include atSmall {
+		font-size: 1rem;
+	}
+	@include atMedium {
+		font-size: 2rem;
+	}
+	@include atXMedium {
+		font-size: 3rem;
+	}
+	@include atLarge {
+		font-size: 4rem;
+	}
+	@include atXLarge {
+		font-size: 5rem;
+	}
+}
+
+.volume {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	color: white;
+	display: absolute;
+	@include atSmall {
+		font-size: 0.8rem;
+		margin-left: 10px;
+		margin-top: 5px;
+	}
+	@include atXSmall {
+		font-size: 0.9rem;
+		margin-left: 10px;
+		margin-top: 70px;
+	}
+	@include atMedium {
+		font-size: 2rem;
+		margin-left: 10px;
+		margin-top: 100px;
+	}
+	@include atXMedium {
+		font-size: 2.5rem;
+		margin-left: 10px;
+		margin-top: 100px;
+	}
+	@include atLarge {
+		font-size: 3rem;
+		margin-left: 10px;
+		margin-top: 200px;
+	}
+	@include atXLarge {
+		margin-left: 10px;
+		margin-top: 600px;
+	}
+}
+
+.icon-background {
+	color: #00000069;
+}

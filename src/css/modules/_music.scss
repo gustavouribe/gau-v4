@@ -1,0 +1,152 @@
+.music-article {
+  display: grid;
+  grid-template-rows: auto;
+  justify-content: center;
+  grid-gap: 30px;
+  font-family: $roboto;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2rem; // margin: auto;
+  // font-family: "Montserrat", sans-serif;
+  // font-size: 1.2rem;
+  // letter-spacing: 2px;
+  @include atSmall {
+    padding: 5px 30px 0px 30px;
+    grid-template-columns: minmax(100px, 800px);
+    grid-template-areas: "a" "b" "d" "c";
+  }
+  @include atXMedium {
+    padding: 30px 30px 0px 30px;
+    grid-template-columns: minmax(100px, 500px) minmax( 100px, 500px);
+    grid-template-areas: "a b" "c d";
+  }
+  @include atLarge {
+    padding: 100px 30px 0px 30px;
+  }
+}
+
+.music-a {
+  grid-area: a;
+}
+
+.music-b {
+  grid-area: b;
+  @include atSmall {
+    text-align: center;
+  }
+  @include atXMedium {
+    text-align: left;
+  }
+}
+
+.music-c {
+  grid-area: c;
+  @include atSmall {
+    text-align: center;
+  }
+  @include atXMedium {
+    text-align: left;
+  }
+}
+
+.music-d {
+  grid-area: d;
+}
+
+.music-image {
+  width: 100%;
+  max-width: 475px;
+}
+
+.paragraph-header {
+  font-family: $oswald;
+  font-size: 2.5rem;
+}
+
+.composition-grid {
+  // padding-top: 100px;
+  p {
+    margin: 0px;
+  }
+  display: grid;
+  @include atSmall {
+    grid-template-columns: minmax(100px, 800px);
+  }
+  @include atXMedium {
+    grid-template-columns: minmax(100px, 350px) minmax( 100px, 350px) minmax(100px, 350px);
+  }
+  grid-template-rows: auto;
+  padding: 10px;
+  justify-content: center;
+  font-family: $roboto;
+  font-size: 1.4rem;
+  &--description {
+    grid-template-columns: minmax(100px, 1050px);
+    font-family: $roboto;
+    font-weight: 300;
+  }
+  &--title {
+    font-family: $oswald;
+    font-size: 2.5rem;
+  }
+  &--grey {
+    background-color: #dddddd;
+    max-width: 1250px;
+    margin: auto;
+  }
+}
+
+.composition-grid a:link,
+a:visited,
+a:active {
+  color: black;
+  font-size: 1.4rem;
+  text-transform: none;
+  padding: 0px;
+}
+
+.composition-grid a:hover {
+  color: $red;
+  transition: 0.3s;
+}
+
+.section-header--music {
+  padding: 60px 0px 30px 0px;
+  font-family: $oswald;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.discography-grid {
+  p {
+    margin: 0px;
+  }
+  display: grid;
+  grid-template-columns: 500px 660px;
+  grid-template-rows: auto;
+  padding: 10px;
+  justify-content: center;
+  align-items: top;
+  font-family: $roboto;
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: center;
+  grid-gap: 30px;
+  &--title {
+    font-family: $oswald; // font-size: 2.5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  @include atSmall {
+    grid-template-columns: minmax(100px, 800px);
+  }
+  @include atXMedium {
+    grid-template-columns: minmax(100px, 500px) minmax( 100px, 660px);
+  }
+}
+
+.cover-images {
+  width: 100%;
+  max-width: 456px;
+}

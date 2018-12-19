@@ -1,0 +1,141 @@
+hr {
+	max-width: 1200px;
+	width: 82%;
+}
+
+.section-header--video {
+	font-family: $oswald;
+	font-size: 3rem;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.video-about {
+	display: grid;
+	grid-template-rows: auto;
+	justify-content: center;
+	grid-gap: 10px;
+	font-family: $roboto;
+	font-weight: 400;
+	font-size: 1.4rem;
+	line-height: 2rem;
+	@include atSmall {
+		padding: 40px 30px 0px 30px;
+		grid-template-columns: minmax(100px, 800px);
+		grid-template-areas: "a" "b";
+	}
+	@include atXMedium {
+		grid-template-columns: minmax(100px, 550px) minmax(
+				100px,
+				550px
+			);
+		grid-template-areas: "a b";
+	}
+	@include atLarge {
+		padding: 60px 30px 0px 30px;
+	}
+}
+
+.video-about-a {
+	grid-area: a;
+}
+
+.video-about-b {
+	grid-area: b;
+}
+
+.writing-b {
+	grid-area: b;
+}
+
+.img-video {
+	width: 100%;
+	max-width: 475px;
+}
+
+.video-dropcap {
+	// text-transform: uppercase;
+	font-size: 2.5rem;
+	color: $red;
+	font-family: $oswald;
+	letter-spacing: 1rem;
+	text-align: right;
+}
+
+.cuisine-cholo {
+	padding: 0px 30px 0px 30px;
+	display: grid;
+	grid-template-rows: auto;
+	justify-content: center;
+	grid-gap: 10px;
+	font-family: $roboto;
+	font-weight: 400;
+	font-size: 1.4rem;
+	line-height: 2rem;
+	@include atSmall {
+		grid-template-columns: minmax(100px, 800px);
+		grid-template-areas: "c" "d";
+	}
+	@include atXMedium {
+		grid-template-columns: minmax(100px, 550px) minmax(
+				500px,
+				500px
+			);
+		grid-template-areas: "c d";
+	}
+}
+
+.cuisine-cholo-c {
+	grid-area: c;
+}
+
+.cuisine-cholo-d {
+	grid-area: d;
+	@include atSmall {
+		text-align: center;
+	}
+	@include atXMedium {
+		text-align: left;
+	}
+}
+
+.img-cuisine-cholo {
+	width: 100%;
+	max-width: 360px;
+}
+
+.cuisine-cholo a:link,
+a:visited,
+a:active {
+	color: $grey;
+	padding: 10px;
+	font-size: 3rem;
+}
+
+.cuisine-cholo a:hover {
+	color: $red;
+	transition: 0.3s;
+}
+
+.music-video {
+	padding: 0px 30px 0px 30px;
+	display: grid;
+	grid-template-rows: auto;
+	justify-content: center;
+	grid-gap: 10px;
+	@include atSmall {
+		grid-template-columns: minmax(100px, 800px);
+	}
+	@include atXMedium {
+		grid-template-columns: minmax(100px, 600px) minmax(
+				100px,
+				600px
+			);
+	}
+}
+
+.music-video-youtube {
+	width: 100%;
+	max-width: 560px;
+	margin: auto;
+}
